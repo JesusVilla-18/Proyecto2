@@ -15,31 +15,31 @@ END PROY_ID;
 
 ARCHITECTURE FuncLogic OF PROY_ID IS
 BEGIN
-	WITH ID3 SELECT F3 <= 
-		'1' WHEN "000",
-		'1' WHEN "010",
-		'1' WHEN "101",
-		'1' WHEN "111",
+	WITH ID3 SELECT F3 <= --0225745
+		'1' WHEN "000", --0
+		'1' WHEN "010", --2
+		'1' WHEN "100", --4
+		'1' WHEN "101", --5
+		'1' WHEN "111", --7
 		'0' WHEN OTHERS;
-	WITH ID2 SELECT F2 <= 
-		'1' WHEN "000",
-		'1' WHEN "010",
-		'1' WHEN "100",
-		'1' WHEN "101",
-		'1' WHEN "111",
+	WITH ID2 SELECT F2 <= --0228637
+		'1' WHEN "000", --0
+		'1' WHEN "010", --2
+		'1' WHEN "011", --3
+		'1' WHEN "110", --6
+		'1' WHEN "111", --7
 		'0' WHEN OTHERS;
-	WITH ID1 SELECT F1 <= 
-		'1' WHEN "000",
-		'1' WHEN "010",
-		'1' WHEN "011",
-		'1' WHEN "110",
-		'1' WHEN "111",
+	WITH ID1 SELECT F1 <= --0202579
+		'1' WHEN "000", --0
+		'1' WHEN "010", --2
+		'1' WHEN "101", --5
+		'1' WHEN "111", --7
 		'0' WHEN OTHERS;
-	WITH ID0 SELECT F0 <= 
-		'1' WHEN "000",
-		'1' WHEN "010",
-		'1' WHEN "100",
-		'1' WHEN "111",
+	WITH ID0 SELECT F0 <= --0224774
+		'1' WHEN "000", --0
+		'1' WHEN "010", --2
+		'1' WHEN "100", --4
+		'1' WHEN "111", --7
 		'0' WHEN OTHERS;
 
 END FuncLogic;
